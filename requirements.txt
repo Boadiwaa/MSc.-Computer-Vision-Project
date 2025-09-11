@@ -1,0 +1,6 @@
+# Apply ml-cvnets' constraints globally during install
+-c https://raw.githubusercontent.com/apple/ml-cvnets/main/constraints.txt
+# Install ml-cvnets' runtime requirements (torchtext, fvcore, etc.)
+-r https://raw.githubusercontent.com/apple/ml-cvnets/main/requirements.txt
+# Install this package last
+-e .

@@ -1,0 +1,15 @@
+name: irp-pbm24
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.8
+  - pip>=23
+  # Keep Conda minimal; use pip for everything that ml-cvnets constrains.
+  - pip:
+      # Apply ml-cvnets constraints to the entire transaction
+      - -c https://raw.githubusercontent.com/apple/ml-cvnets/main/constraints.txt
+      # Install ml-cvnets' own requirements first
+      - -r https://raw.githubusercontent.com/apple/ml-cvnets/main/requirements.txt
+      # Finally install the irp-pbm24 package (editable for local dev)
+      - -e .

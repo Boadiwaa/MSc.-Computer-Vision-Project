@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "irp-pbm24"
+version = "0.1"
+description = """
+Python Package for the project: Efficient Robotic Vision in the Field: 
+A Deep Learning Architecture for Strawberry Disease Detection
+"""
+readme = "README.md"
+
+# Torch 1.13 / NumPy 1.21 stack targets Python 3.10
+requires-python = ">=3.10,<3.11"
+license = {file = "LICENSE.txt"}
+keywords = ["mobilevit", "ml-cvnets", "anomaly detector", "classifier", "deep learning"]
+authors = [
+    {name = "P. B. Mensah", email = "paulina.mensah24@imperial.ac.uk" }
+]
+maintainers = [
+    {name = "P. B. Mensah", email = "paulina.mensah24@imperial.ac.uk" }
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13"
+]
+
+dependencies = [
+  "numpy==1.21.2",
+  "torch==1.13.0",
+  "torchvision==0.14.0",
+  "pillow==9.5.0",
+  "matplotlib==3.7.1",
+  "imagehash",
+  "notebook",
+  "torchmetrics",
+  "opencv-python==4.5.5.64",
+  "cvnets @ git+https://github.com/apple/ml-cvnets.git@main"
+]
+
+[tool.setuptools]
+packages = ["irp_code"]
